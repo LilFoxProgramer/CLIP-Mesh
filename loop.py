@@ -52,7 +52,7 @@ def loop(cfg):
     torch.cuda.set_device(device)
 
     # Initialize CLIP model
-    model, _ = clip.load(cfg["clip_model"], device=device)
+    model, _ = clip.load('IDEA-CCNL/Taiyi-CLIP-Roberta-102M-Chinese', device=device)
 
     clip_mean = torch.tensor([0.48154660, 0.45782750, 0.40821073], device=device)
     clip_std  = torch.tensor([0.26862954, 0.26130258, 0.27577711], device=device)
